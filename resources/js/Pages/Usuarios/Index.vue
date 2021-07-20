@@ -14,11 +14,11 @@
                     <h3 class="card-title align-items-start flex-column">
                     <!--begin::Form-->
                     <input
-                        type="text"
+                        type="search"
                         class="form-control form-control-sm"
                         placeholder="Buscar"
                         v-model="paramBusqueda"
-                        @keyup.enter="getListUsuarios"
+                        @keyup="getListUsuarios"
                     />
                     <!--end::Form-->
                     </h3>
