@@ -31,7 +31,7 @@
 	<!--begin::Body-->
 	<body id="kt_body" 
     class="header-fixed header-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading"
-    style="height: 100%; background-color:#fff; background-image: url('{{ asset('assets/media/bg/bg-13.jpg') }}');background-repeat: no-repeat;background-size: cover;">
+    style="height: 100%; background-color:#fff; background-image: url('{{ asset('assets/media/bg/bg-12.jpg') }}');background-repeat: no-repeat;background-size: cover;">
 		<div class="container">
 			<div class="row mt-2">
 				<div class="col-md-12">
@@ -56,10 +56,10 @@
 							<form method="POST" action="{{ route('login') }}" class="margin-t">
                             	@csrf
 								<div class="form-group">
-									<input class="form-control h-auto text-dark placeholder-dark opacity-100 bg-dark-o-30 rounded-pill border-0 py-4 px-8 mb-5" type="email" placeholder="Usuario" name="email" autocomplete="off" />
+									<input class="form-control h-auto text-dark placeholder-dark opacity-100 bg-dark-o-30 rounded-pill border-0 py-4 px-8 mb-5" type="email" placeholder="Usuario" name="email" autocomplete="off" required/>
 								</div>
 								<div class="form-group">
-									<input class="form-control h-auto text-dark placeholder-dark opacity-100 bg-dark-o-30 rounded-pill border-0 py-4 px-8 mb-5" type="password" placeholder="Contraseña" name="password" />
+									<input class="form-control h-auto text-dark placeholder-dark opacity-100 bg-dark-o-30 rounded-pill border-0 py-4 px-8 mb-5" type="password" placeholder="Contraseña" name="password" required/>
 								</div>
 								<div class="form-group text-center mt-10">
 									<button type="submit" class="btn btn-pill btn-outline-success font-weight-bold opacity-90 px-15 py-3">{{ __('Entrar') }}</button>

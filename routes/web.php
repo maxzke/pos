@@ -15,22 +15,13 @@ Route::get('login', function () {
 Route::delete('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 Route::middleware('auth')->get('/',[DashboardController::class,'index'])->name('/');
 Route::middleware('auth')->get('/dashboard', [DashboardController::class,'index'])->name('dashboard');
-/****************************************************************
- * ********************* USUARIOS *******************************
- ****************************************************************/
 /**
- * SIN AUTH PARA REGISTRAR USUARIO DE PRUEBA
- */
-// Route::get('usuarios', [UserController::class,'index'])->name('usuarios.index');
-// Route::get('usuarios-view', [UserController::class,'user_view'])->name('usuario.view');
-// Route::get('usuarios/{user}/edit', [UserController::class,'edit'])->name('usuario.edit');
-// Route::put('usuarios/{user}', [UserController::class, 'update'])->name('usuario.update');
-// Route::get('usuarios/nuevo', [UserController::class, 'create'])->name('usuario.create');
-// Route::post('usuarios', [UserController::class, 'store'])->name('usuario.store');
-// Route::get('usuario/search', [UserController::class,'search'])
-// ->middleware('auth');
-/**
- * CON AUTH
+ * USERS
+ * admin@admin.com
+ * Admin123456
+ * 
+*INSERT INTO `users` (`name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
+*('admin', 'admin@admin.com', NULL, '$2y$10$AYs3FRP12Eb8SSczI8bbL.rCBrpvCJ6DwzrvH5OznVvm5y5OQyNR2', NULL, NULL, NULL, NULL, NULL, '2021-07-01 04:43:28', '2021-07-01 04:43:28');
  */
 Route::middleware('auth')->get('usuarios', [UserController::class,'index'])->name('usuarios.index');
 Route::middleware('auth')->get('usuarios-view', [UserController::class,'user_view'])->name('usuario.view');
